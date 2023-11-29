@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "606993605946",
+    "firebase_url": "https://b2c-market-6b10c-default-rtdb.firebaseio.com",
+    "project_id": "b2c-market-6b10c",
+    "storage_bucket": "b2c-market-6b10c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606993605946:android:2e89b2503666bac43fdc03",
+        "android_client_info": {
+          "package_name": "com.example.b2cmarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA23vyPSIu6b08RmqPebfw5X-WMJ_HST14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
