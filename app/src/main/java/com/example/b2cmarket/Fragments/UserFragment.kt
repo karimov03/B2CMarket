@@ -1,11 +1,12 @@
 package com.example.b2cmarket.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.b2cmarket.R
+import com.example.b2cmarket.RegisterActivity
 import com.example.b2cmarket.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {
@@ -16,6 +17,10 @@ class UserFragment : Fragment() {
     ): View? {
 
 
+        binding.btnRegister.setOnClickListener {
+            val intent = Intent(requireContext(), RegisterActivity::class.java)
+            startActivity(intent)
+        }
         return binding.root
     }
 }
