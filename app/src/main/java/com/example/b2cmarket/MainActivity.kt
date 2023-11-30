@@ -3,6 +3,8 @@ package com.example.b2cmarket
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.navigation.findNavController
 import com.example.b2cmarket.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,24 +18,32 @@ class MainActivity : AppCompatActivity() {
             binding.btnLike.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnShop.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnUser.setBackgroundColor(Color.parseColor("#FFFFFF"))
+
+            findNavController(R.id.my_navigation_host).navigate(R.id.homeFragment)
         }
         binding.btnLike.setOnClickListener{
             binding.btnHome.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnLike.setBackgroundColor(Color.parseColor("#69A6F9"))
             binding.btnShop.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnUser.setBackgroundColor(Color.parseColor("#FFFFFF"))
+            findNavController(R.id.my_navigation_host).navigate(R.id.likeFragment)
         }
         binding.btnShop.setOnClickListener{
             binding.btnHome.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnLike.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnShop.setBackgroundColor(Color.parseColor("#69A6F9"))
             binding.btnUser.setBackgroundColor(Color.parseColor("#FFFFFF"))
+            findNavController(R.id.my_navigation_host).navigate(R.id.shopFragment)
         }
         binding.btnUser.setOnClickListener{
             binding.btnHome.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnLike.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnShop.setBackgroundColor(Color.parseColor("#FFFFFF"))
             binding.btnUser.setBackgroundColor(Color.parseColor("#69A6F9"))
+            findNavController(R.id.my_navigation_host).navigate(R.id.userFragment)
+        }
+        binding.btnSell.setOnClickListener {
+            Toast.makeText(this, "Sabr", Toast.LENGTH_SHORT).show()
         }
 
     }
