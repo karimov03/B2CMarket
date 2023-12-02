@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             if (navController.currentDestination?.id != R.id.homeFragment) {
                 setButtonColors(binding.btnHome)
                 navController.popBackStack()
+                navController.navigate(R.id.homeFragment)
             }
         }
 

@@ -22,9 +22,9 @@ class PhoneNumberFragment : Fragment() {
     ): View? {
         binding.btnNext.setOnClickListener {
             if (!binding.edtPhoneNumber.text.toString().isNullOrEmpty() && binding.edtPhoneNumber.text.toString().length==9 && binding.edtPhoneNumber.text.toString().isDigitsOnly()){
-                val bundle=Bundle()
-                bundle.putString("phoneNumber",binding.edtPhoneNumber.text.toString())
-                findNavController().navigate(R.id.checkPasswordFragment,bundle)
+                val bundle = Bundle()
+                bundle.putString("phoneNumber", binding.edtPhoneNumber.text.toString())
+                findNavController().navigate(R.id.checkPasswordFragment, bundle)
             }
             else{
                 Toast.makeText(requireContext(), "Raqamda xatolik", Toast.LENGTH_SHORT).show()

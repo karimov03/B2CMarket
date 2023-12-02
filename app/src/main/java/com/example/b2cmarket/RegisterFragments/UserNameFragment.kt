@@ -19,7 +19,8 @@ class UserNameFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val bundle = Bundle()
+
+        val bundle = requireArguments()
         val phoneNumber=bundle.getString("phoneNumber","null")
         binding.thisPhone.text="Foydalanuvchiga biriktirilgan\\ntelefon raqam: $phoneNumber"
         binding.btnNext.setOnClickListener {

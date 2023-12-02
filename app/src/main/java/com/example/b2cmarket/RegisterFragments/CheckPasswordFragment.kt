@@ -18,7 +18,8 @@ class CheckPasswordFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val bundle=Bundle()
+
+        val bundle = requireArguments()
         val phoneNumber=bundle.getString("phoneNumber","null")
 
         binding.thisPhone.text="Kod yuborilgan raqam: $phoneNumber"

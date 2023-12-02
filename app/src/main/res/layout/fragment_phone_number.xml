@@ -57,7 +57,7 @@
                 android:id="@+id/edt_phone_number"
                 android:inputType="phone"
                 android:gravity="center"
-                android:background="0"
+                android:background="@null"
                 android:hint="Phone number"
                 android:layout_margin="10dp"
                 />

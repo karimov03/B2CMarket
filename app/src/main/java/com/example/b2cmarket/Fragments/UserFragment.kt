@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.b2cmarket.ElonActivity.ElonActivity
 import com.example.b2cmarket.RegisterActivity
 import com.example.b2cmarket.databinding.FragmentUserBinding
 
@@ -26,9 +27,19 @@ class UserFragment : Fragment() {
             binding.viewAfter.visibility=View.VISIBLE
             binding.viewBefore.visibility=View.GONE
         }
+        else{
+            binding.viewAfter.visibility=View.GONE
+            binding.viewBefore.visibility=View.VISIBLE
+        }
         binding.btnRegister.setOnClickListener {
             val intent = Intent(requireContext(), RegisterActivity::class.java)
             startActivity(intent)
+        }
+        binding.btnElonJoylash.setOnClickListener {
+            val intent=Intent(requireContext(),ElonActivity::class.java)
+            startActivity(intent)
+
+
         }
         return binding.root
     }
